@@ -15,7 +15,7 @@ os.system('cls')
 while (comando == 1): 
     mensagem = input("Digite sua mensagem: \n -> ")
 
-    decisao = input("Está certo do código? \n 'y' = yes or 'n' = no \n -> ")
+    decisao = input("Está certo da mensagem? \n 'y' = yes or 'n' = no \n -> ")
 
     if (decisao == 'y' or decisao =='Y'): 
         comando = 0
