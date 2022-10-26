@@ -22,30 +22,30 @@ A lógica é enxergar na string alfabeto 'abcdefghijklmnopqrstuvwxyz' cada letra
 - [X] Tentamos criar regras dentro da lógica para manter o backspace, contudo, não obtivemos sucesso dentro do timebox da atividade. Incluir esse caractere de valor Unicode diferente irira quebrar a lógica. Desta forma, o código somente manipula mensagem sem backspace, e se caso inserido o backspace, ele entende como letra 'n' pois vai aplicar a lógica de movimentação circular na string com o valor de backspace até chegar a um caractere que não tem ligação com o mesmo.
 
 ## Construção:
-- Neste programa declarei 2 variáveis que receberão dados digitados pelo usuário: mensagem, codigoSeg e confirmações de inserção ('y' para yes/'n' para no).
+- Neste programa declaramos 2 variáveis que receberão dados digitados pelo usuário: mensagem, codigoSeg e confirmações de inserção ('y' para yes/'n' para no).
 
-- [X] Meu código principal ('main.py) está segmentado em:
+- [X] Nosso código principal ('main.py) está segmentado em:
 0. imports necessários
 1. captura de mensagem do usuário
 2. captura do código do usuário
 3. chamada das funções de arquivos dirferentes
 4. impressões das informações
 
-- [X] Meu código de encriptar (encripta.py):
+- [X] Nosso código de encriptar (encripta.py):
 1. tem parâmetros de mensagem e chave que veem do código principal 'main.py'
-2. listei o alfabeto em string para ser consultada a localização de cada letra necessária
-3.  criei uma variável 'codigoEncriptado' para receber a mensagem alterada
-4. transformo  em minúsculas todas as letras da string recebida
-5. analiso dentro da string varrendo a mensagem recebida e somo a chave recebida a fim de achar o valor encriptado. Vou fazer um append nessa variável encriptada (caractere por caractere), adiconando: o numero do caractere atual menos o numero do caractere 'a' (meu início) mais a chave inserida e tudo isso aplicado módulo 26. 
+2. listamos o alfabeto em string para ser consultada a localização de cada letra necessária
+3. criamos uma variável 'codigoEncriptado' para receber a mensagem alterada
+4. transformamos  em minúsculas todas as letras da string recebida
+5. analisamos dentro da string varrendo a mensagem recebida e somamos a chave recebida a fim de achar o valor encriptado. Vamos fazer um append nessa variável encriptada (caractere por caractere), adiconando: o numero do caractere atual menos o numero do caractere 'a' (meu início) mais a chave inserida e tudo isso aplicado módulo 26. 
 O módulo 26 é usado porque meu valor max é 26, e tudo que exceder o 26 deve reiniciar a contagem lá do meu primeiro valor.
-6. retorno o valor encriptado para o main.py
+6. retornando o valor encriptado para o main.py
 
-- [X] Meu código de decriptar (decripta.py):
+- [X] Nosso código de decriptar (decripta.py):
 1. tem parâmetros de mensagem criptografada e chave que veem do código principal 'main.py'
-2. listei o alfabeto em string (novamente porque este é outro código) para ser consultada a localização de cada letra necessária.
-3. criei uma variável 'codigoDecriptado' para receber a mensagem original
-4. Aqui eu apliquei a lógica de módulo (contudo não consigo fazer módulo de valores menores que 0, então fiz subtraindo os valores dos caracteres. Mas eu não subtraio realmente o valor, eu trabalho proporcionalmente inverso a encriptar: eu pego o valor da letra, somo 26 e diminuo o valor da chave para aplicar o módulo; desta forma ele faz a volta na string e daí sim eu consigo aplicar encontrar a letra original. Se eu diminuisse do valor da letra codificada literalmente, estouraria o range da minha string alfabeto.
-5. retorno o valor decriptado para o main.py
+2. listamos o alfabeto em string (novamente porque este é outro código) para ser consultada a localização de cada letra necessária.
+3. criamos uma variável 'codigoDecriptado' para receber a mensagem original
+4. Aqui aplicamos a lógica de módulo %(contudo não consiguimos fazer módulo de valores menores que 0, então fizemos subtraindo os valores dos caracteres. Mas não subtraimos realmente o valor, trabalhamos com o proporcionalmente inverso a encriptar: pegando o valor da letra, somando 26 e diminuindo o valor da chave para aplicar o módulo; desta forma ele faz a volta na string e daí sim conseguimos aplicar encontrar a letra original. Se diminuissemos do valor da letra codificada literalmente, estouraria o range da string alfabeto.
+5. retornando o valor decriptado para o main.py
 
 - [X] Prints do teste de mesa:
 
@@ -55,12 +55,3 @@ O módulo 26 é usado porque meu valor max é 26, e tudo que exceder o 26 deve r
 ![image](https://user-images.githubusercontent.com/56809101/197914196-654facab-535e-42c5-8a9a-5c4f78714f06.png)
 ![image](https://user-images.githubusercontent.com/56809101/197914218-5f168666-02e8-4b00-8dfc-3cf36c237fab.png)
 ![image](https://user-images.githubusercontent.com/56809101/197914230-4f553234-9cf3-4977-9480-fe1ff504f23e.png)
-
-
-
-
-
-
-
-
-
